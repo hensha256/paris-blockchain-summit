@@ -16,7 +16,7 @@ contract SafestBank {
         require(accountBalance[msg.sender] >= _amountToWithdraw, "Caller doesnt have enough money to withdraw");
 
         accountBalance[msg.sender] -= _amountToWithdraw;
-        msg.sender.transfer(_amountToWithdraw)();
+        msg.sender.transfer(_amountToWithdraw);
     }
 }
 
